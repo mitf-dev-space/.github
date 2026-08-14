@@ -1,0 +1,22 @@
+name: Add to Platform Health project
+
+on:
+  issues:
+    types: [opened, labeled, reopened]
+  pull_request:
+    types: [opened, labeled, reopened]
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
+jobs:
+  add-to-project:
+    if: contains(join(github.event.*.labels.*.name, ','), 'platform-health') || github.event_name == 'issues' && github.event.action == 'opened' && github.repository == 'mitf-dev-space/.github'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/add-to-project@v1.0.2
+        with:
+          project-url: https://github.com/orgs/mitf-dev-space/projects/2
+          github-token: ${{ secrets.GITHUB_TOKEN }}
