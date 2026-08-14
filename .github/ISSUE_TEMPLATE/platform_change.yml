@@ -1,0 +1,36 @@
+name: Platform Change
+description: Feature or change request for a full-stack platform repo
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - Support
+        - Notification
+        - Voucher
+        - AML
+        - Insurance
+        - Payment
+        - Release Management
+        - Other
+    validations:
+      required: true
+  - type: checkboxes
+    id: layers
+    attributes:
+      label: Affected layers
+      options:
+        - label: Backend / API
+        - label: Web / Admin UI
+        - label: Mobile
+        - label: Infrastructure / Compose
+        - label: E2E / CI
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+    validations:
+      required: true
