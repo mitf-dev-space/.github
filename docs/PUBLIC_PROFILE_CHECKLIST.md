@@ -10,6 +10,8 @@ Steps to polish the **public image** of https://github.com/mitf-dev-space. Most 
 - [x] SVG logo — `profile/logo.svg`
 - [x] Public doc repos linked from profile
 - [x] Governance and migration docs in `.github`
+- [x] **`.github` repository is public** — required for GitHub to render `profile/README.md` on https://github.com/mitf-dev-space (private `.github` shows the default “create a README or pin repos” placeholder)
+- [x] Six repositories pinned on org home (API)
 
 ---
 
