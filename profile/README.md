@@ -26,6 +26,14 @@ Company-owned full-stack platform repositories. Each repo is a **platform** (bac
 - [compose-buzz](https://github.com/mitf-dev-space/compose-buzz)
 - [compose-omnitest-studio](https://github.com/mitf-dev-space/compose-omnitest-studio) (public)
 
+## Platform template
+
+- [mitf-platform-template](https://github.com/mitf-dev-space/mitf-platform-template) — use **Use this template** for new platforms
+
+## Archived
+
+- `AMLSystem` — consolidated into [mitf-aml-system](https://github.com/mitf-dev-space/mitf-aml-system)
+
 ## Deferred / personal (not in org)
 
 | Item | Location | Notes |
