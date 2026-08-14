@@ -9,13 +9,19 @@ This document covers what was automated in the org and what you configure once i
 ## Already automated (via `.github` repo + API)
 
 - **15 tracker issues** in `mitf-dev-space/.github` with label `platform-health` (issues #2–#16)
-- **Custom project fields** created via API: Platform, Priority, Work type, Health
-- **Initial field values** set on all seed issues (priority/health/platform/work type)
+- **Custom project fields**: Platform, Priority, Work type, Health, Target date
+- **Initial field values** set on all seed issues
+- **Project views** (via GraphQL API):
+  - **Platform health** (table) — filter: `-status:Done`
+  - **CI & security** (table) — filter: `label:security OR label:devops`
+  - **Active work** (board) — filter: `status:Todo OR status:"In Progress"`
+  - **Roadmap** (roadmap) — uses Target date field (set dates per item in table view)
 - **Project linked** to `mitf-dev-space/.github` repository
 - **Project marked as org template**
-- **Auto-add workflow** pushed to `.github/workflows/platform-health-auto-add.yml`
-- Label `platform-health` plus helper labels (`devops`, `security`, `platform`, `triage`, `blocked`)
-- Test issue #1 archived on the board
+- **Auto-add workflow** in `.github/workflows/platform-health-auto-add.yml`
+- Labels on `.github` repo
+
+**Optional UI polish** (group-by/sort on views): open each view → set Group by / Sort in the toolbar. The API cannot set grouping or sorting.
 
 After you complete **Step 1** below (grant workflow access), new issues labeled `platform-health` will appear on the board automatically.
 
@@ -49,24 +55,16 @@ Keep built-in **Status**: Backlog → Todo → In progress → In review → Don
 
 ## Step 3 — Create views
 
-Click **+ New view** for each:
+**Done via API.** Open https://github.com/orgs/mitf-dev-space/projects/2 and use the view tabs:
 
-### Platform health (Table) — default
-- Group by: **Repository**
-- Sort: **Health** (asc), then **Priority**
-- Filter: Status is not Done
+| View | Layout | Filter |
+|------|--------|--------|
+| Platform health | Table | `-status:Done` |
+| CI & security | Table | `label:security OR label:devops` |
+| Active work | Board | `status:Todo OR status:"In Progress"` |
+| Roadmap | Roadmap | (set **Target date** on items) |
 
-### CI & security (Table)
-- Filter: Label contains `security` OR `devops` OR Work type is `CI/CD`
-
-### Active work (Board)
-- Layout: Board
-- Group by: **Status**
-- Filter: Status is Todo, In progress, or In review
-
-### Roadmap (Roadmap) — optional
-- Add field **Target date** (Date) first
-- Layout: Roadmap, group by **Platform**
+Optional: in each view toolbar, set **Group by** (e.g. Repository on Platform health, Status on Active work) and **Sort** (Health, then Priority).
 
 ---
 
