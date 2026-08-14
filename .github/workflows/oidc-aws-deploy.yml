@@ -1,0 +1,19 @@
+name: OIDC AWS Deploy (template)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364b9f6c2b # v4.2.2
+      - uses: aws-actions/configure-aws-credentials@e3dd6c4294d587fcbd9c2a1dd4d1dcefaeb84fae # v4.0.2
+        with:
+          role-to-assume: arn:aws:iam::ACCOUNT_ID:role/github-mitf-deploy
+          aws-region: eu-central-1
+      - run: echo "Replace with your deploy steps"
