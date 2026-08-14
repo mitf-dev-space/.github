@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: MITF Dev Space Security
+    url: https://github.com/mitf-dev-space/.github/blob/main/SECURITY.md
+    about: Report security vulnerabilities (do not open public issues)
+  - name: Contributing Guide
+    url: https://github.com/mitf-dev-space/.github/blob/main/CONTRIBUTING.md
+    about: How we work with platform repositories
