@@ -17,11 +17,13 @@ Steps to polish the **public image** of https://github.com/mitf-dev-space. Most 
 
 ### 1. Organization avatar (logo)
 
-1. Export `profile/logo.svg` to **512×512 PNG** (Figma, Inkscape, or any SVG→PNG tool)
-2. Open https://github.com/organizations/mitf-dev-space/settings/profile
-3. Upload PNG as **Organization picture**
+**Use the PNG file** (GitHub does not accept SVG for org avatars):
 
-Until then, the README displays the logo via raw GitHub URL.
+1. Download **[logo-512.png](https://github.com/mitf-dev-space/.github/raw/main/profile/logo-512.png)** (512×512)
+2. Open https://github.com/organizations/mitf-dev-space/settings/profile
+3. Upload `logo-512.png` as **Organization picture**
+
+Source SVG (for README / design tools): `profile/logo.svg`
 
 ### 2. Organization profile fields
 
