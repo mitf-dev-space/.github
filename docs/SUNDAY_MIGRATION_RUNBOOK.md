@@ -4,6 +4,9 @@
 **Project board:** https://github.com/orgs/mitf-dev-space/projects/2  
 **When:** From company domain (Sunday or later)
 
+> **Primary work Sunday:** [GitLab → GitHub migration](./GITLAB_TO_GITHUB_MIGRATION_PLAN.md) (67 repos on `10.10.20.51`).  
+> This runbook covers **Track A** — transferring repos already on personal GitHub.
+
 ---
 
 ## Pre-flight (org is ready)
@@ -111,6 +114,8 @@ gh api -X POST orgs/mitf-dev-space/invitations -f invitee_id=138626157 -f role=a
 ## Quick links
 
 - [Platform catalog](https://github.com/mitf-dev-space/.github/blob/main/profile/README.md)
+- [**GitLab migration plan**](./GITLAB_TO_GITHUB_MIGRATION_PLAN.md)
+- [GitLab per-repo runbook](./GITLAB_MIGRATION_RUNBOOK.md)
 - [New platform checklist](./NEW_PLATFORM_CHECKLIST.md)
 - [Access review](./ACCESS_REVIEW.md)
 - [Platform Health setup](./PLATFORM_HEALTH_PROJECT.md)
