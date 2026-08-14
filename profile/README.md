@@ -38,7 +38,8 @@ Company-owned full-stack platform repositories. Each repo is a **platform** (bac
 
 | Item | Location | Notes |
 |------|----------|-------|
-| Wallet platform | `anstwechy/wallet-services` | Migrate when team is ready |
+| Wallet platform | `anstwechy/wallet-services` | Migrate when team confirms (see Sunday runbook) |
+| Compose stacks (6) | `anstwechy/compose-*` | Retry transfer from company domain — see [Sunday migration runbook](https://github.com/mitf-dev-space/.github/blob/main/docs/SUNDAY_MIGRATION_RUNBOOK.md) |
 | Personal | `anstwechy/tw-os`, `anstwechy/masarat-portfolio` | Do not transfer |
 
 ## Access model
@@ -53,4 +54,6 @@ Company-owned full-stack platform repositories. Each repo is a **platform** (bac
 - [Quarterly access review](https://github.com/mitf-dev-space/.github/blob/main/docs/ACCESS_REVIEW.md)
 - [New platform checklist](https://github.com/mitf-dev-space/.github/blob/main/docs/NEW_PLATFORM_CHECKLIST.md)
 - [OIDC & supply chain hardening](https://github.com/mitf-dev-space/.github/blob/main/docs/OIDC_AND_SUPPLY_CHAIN.md)
+- [Sunday migration runbook](https://github.com/mitf-dev-space/.github/blob/main/docs/SUNDAY_MIGRATION_RUNBOOK.md)
+- [Platform Health project](https://github.com/mitf-dev-space/.github/blob/main/docs/PLATFORM_HEALTH_PROJECT.md)
 - [Contributing guide](https://github.com/mitf-dev-space/.github/blob/main/CONTRIBUTING.md)
