@@ -6,13 +6,18 @@ This document covers what was automated in the org and what you configure once i
 
 ---
 
-## Already automated (via `.github` repo)
+## Already automated (via `.github` repo + API)
 
-- **15 tracker issues** created in `mitf-dev-space/.github` with label `platform-health`
-- **Auto-add workflow** on `.github` (and can be copied to platform repos) — adds items to project 2 when labeled `platform-health`
-- Label `platform-health` on the org profile repo
+- **15 tracker issues** in `mitf-dev-space/.github` with label `platform-health` (issues #2–#16)
+- **Custom project fields** created via API: Platform, Priority, Work type, Health
+- **Initial field values** set on all seed issues (priority/health/platform/work type)
+- **Project linked** to `mitf-dev-space/.github` repository
+- **Project marked as org template**
+- **Auto-add workflow** pushed to `.github/workflows/platform-health-auto-add.yml`
+- Label `platform-health` plus helper labels (`devops`, `security`, `platform`, `triage`, `blocked`)
+- Test issue #1 archived on the board
 
-After you complete **Step 1** below (grant workflow access), new issues will appear on the board automatically.
+After you complete **Step 1** below (grant workflow access), new issues labeled `platform-health` will appear on the board automatically.
 
 ---
 
