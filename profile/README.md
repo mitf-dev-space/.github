@@ -38,3 +38,11 @@ Company-owned full-stack platform repositories. Each repo is a **platform** (bac
 - Org default permission: **None** — access via teams only
 - Platform repos: `engineering-leads` + `backend` + `platform` (Write)
 - CODEOWNERS documents ownership; enforcement on private repos requires GitHub Team
+
+## Governance docs
+
+- [Actions secrets runbook](https://github.com/mitf-dev-space/.github/blob/main/docs/ACTIONS_SECRETS_RUNBOOK.md)
+- [Quarterly access review](https://github.com/mitf-dev-space/.github/blob/main/docs/ACCESS_REVIEW.md)
+- [New platform checklist](https://github.com/mitf-dev-space/.github/blob/main/docs/NEW_PLATFORM_CHECKLIST.md)
+- [OIDC & supply chain hardening](https://github.com/mitf-dev-space/.github/blob/main/docs/OIDC_AND_SUPPLY_CHAIN.md)
+- [Contributing guide](https://github.com/mitf-dev-space/.github/blob/main/CONTRIBUTING.md)
