@@ -1,6 +1,5 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/mitf-dev-space/.github/main/profile/logo.svg" width="140" alt="MITF Dev Space logo" />
 
 # MITF Dev Space
 
