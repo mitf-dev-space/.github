@@ -11,16 +11,24 @@ permissions:
 
 jobs:
   analyze-and-test:
-    name: Analyze & test
+    name: Analyze and unit test
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: .  # set to app subdir if needed
-
     steps:
       - uses: actions/checkout@v4
 
+      - name: Check for pubspec
+        id: pubspec
+        shell: bash
+        run: |
+          if [ -f pubspec.yaml ]; then
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "present=false" >> "$GITHUB_OUTPUT"
+            echo "No pubspec.yaml — skipping Flutter CI (standards-only branch)."
+          fi
+
       - name: Read FVM flutter version
+        if: steps.pubspec.outputs.present == 'true'
         id: fvm
         shell: bash
         run: |
@@ -31,54 +39,20 @@ jobs:
           fi
 
       - uses: subosito/flutter-action@v2
+        if: steps.pubspec.outputs.present == 'true'
         with:
           flutter-version: ${{ steps.fvm.outputs.version }}
           channel: stable
           cache: true
 
       - name: Flutter pub get
+        if: steps.pubspec.outputs.present == 'true'
         run: flutter pub get
 
-      - name: Code generation
-        run: |
-          if grep -q build_runner pubspec.yaml 2>/dev/null; then
-            dart run build_runner build --delete-conflicting-outputs
-          fi
-
       - name: Flutter analyze
+        if: steps.pubspec.outputs.present == 'true'
         run: flutter analyze
 
-      - name: Flutter test
+      - name: Unit tests
+        if: steps.pubspec.outputs.present == 'true'
         run: flutter test
-
-  android-build-dev:
-    name: Android development APK (optional)
-    runs-on: ubuntu-latest
-    needs: analyze-and-test
-    if: github.ref == 'refs/heads/develop' && hashFiles('build.sh') != ''
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: subosito/flutter-action@v2
-        with:
-          flutter-version: "3.24.1"
-          channel: stable
-          cache: true
-
-      - name: Decode keystore
-        env:
-          ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
-        run: |
-          if [ -n "$ANDROID_KEYSTORE_BASE64" ]; then
-            echo "$ANDROID_KEYSTORE_BASE64" | base64 -d > android/app/release.keystore
-          fi
-
-      - name: Build development flavor
-        env:
-          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
-          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
-          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
-        run: |
-          flutter pub get
-          chmod +x ./build.sh
-          ./build.sh development
