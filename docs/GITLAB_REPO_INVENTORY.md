@@ -4,8 +4,8 @@ Exported from Google Sheet **Repo It DEP 01**:
 https://docs.google.com/spreadsheets/d/125Hl9a5Rp1VjkzXGDisWniaW02ID2Jo4jpS_GjZrU8Y/edit
 
 **GitLab host:** `http://10.10.20.51`  
-**Total repositories:** 67  
-**Target org:** [mitf-dev-space](https://github.com/mitf-dev-space)
+**Total repositories:** 71 (67 original + 4 mobile packages)  
+**Mobile track:** [MOBILE_MIGRATION_PLAN.md](./MOBILE_MIGRATION_PLAN.md)
 
 Regenerate after sheet updates:
 ```bash
@@ -97,13 +97,23 @@ Regenerate after sheet updates:
 | voucher.management | `mitf-voucher-management` | `back-end/other-projects/voucher-provider` | no | no |
 | Voucher.PurchaseOrchestrator | `mitf-voucher-purchaseorchestrator` | `back-end/other-projects/voucher-provider` | no | no |
 
+## Front-End Mobile — Shared packages (4) — migrate **before** apps
+
+| GitLab name | Proposed GitHub name | GitLab path | Wave |
+|-------------|----------------------|-------------|------|
+| payment-core | `mitf-payment-core` | `front-end/payment/payment-core` | M1 |
+| sharedcomponents | `mitf-sharedcomponents` | `front-end/payment/sharedcomponents` | M1 |
+| mobile-widgets | `mitf-mobile-widgets` | `front-end/banking/mobile-widgets` | M1 |
+| ozmobile | `mitf-ozmobile` | `front-end/banking/packages/ozmobile` | M1 |
+| mitf-ocr (mobile) | `mitf-mobile-ocr` | `front-end/banking/packages/mitf-ocr` | M1 |
+
 ## Front-End Mobile — Banking (13)
 
 | GitLab name | Proposed GitHub name | GitLab path | Pipeline (sheet) | Unit tests (sheet) |
 |-------------|----------------------|-------------|------------------|-------------------|
 | Core Mobile Banking | `mitf-core-mobile-banking` | `front-end/banking` | yes | yes |
 | DIB bank | `mitf-dib-bank` | `front-end/banking` | no | yes |
-| Finish Date | `mitf-finish-date` | `front-end/banking` | no | no |
+| Finish Date | `mitf-daman-360` | `front-end/banking` | no | yes |
 | Masrfi Business | `mitf-masrfi-business` | `front-end/banking` | no | yes |
 | Masrfi Plus | `mitf-masrfi-plus` | `front-end/banking` | no | yes |
 | Mobimal | `mitf-mobimal` | `front-end/banking` | no | yes |

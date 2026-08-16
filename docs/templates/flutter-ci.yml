@@ -1,0 +1,84 @@
+name: Flutter CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+permissions:
+  contents: read
+
+jobs:
+  analyze-and-test:
+    name: Analyze & test
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: .  # set to app subdir if needed
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Read FVM flutter version
+        id: fvm
+        shell: bash
+        run: |
+          if [ -f .fvmrc ]; then
+            echo "version=$(grep -oE '[0-9]+\.[0-9]+\.[0-9]+' .fvmrc | head -1)" >> "$GITHUB_OUTPUT"
+          else
+            echo "version=3.24.1" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: ${{ steps.fvm.outputs.version }}
+          channel: stable
+          cache: true
+
+      - name: Flutter pub get
+        run: flutter pub get
+
+      - name: Code generation
+        run: |
+          if grep -q build_runner pubspec.yaml 2>/dev/null; then
+            dart run build_runner build --delete-conflicting-outputs
+          fi
+
+      - name: Flutter analyze
+        run: flutter analyze
+
+      - name: Flutter test
+        run: flutter test
+
+  android-build-dev:
+    name: Android development APK (optional)
+    runs-on: ubuntu-latest
+    needs: analyze-and-test
+    if: github.ref == 'refs/heads/develop' && hashFiles('build.sh') != ''
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "3.24.1"
+          channel: stable
+          cache: true
+
+      - name: Decode keystore
+        env:
+          ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+        run: |
+          if [ -n "$ANDROID_KEYSTORE_BASE64" ]; then
+            echo "$ANDROID_KEYSTORE_BASE64" | base64 -d > android/app/release.keystore
+          fi
+
+      - name: Build development flavor
+        env:
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: |
+          flutter pub get
+          chmod +x ./build.sh
+          ./build.sh development

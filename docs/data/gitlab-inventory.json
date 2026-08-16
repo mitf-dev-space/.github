@@ -211,9 +211,11 @@
     "github_name": "mitf-core-mobile-banking",
     "has_pipeline": true,
     "has_unit_test": true,
-    "main_branch_gitlab": "master",
-    "dev_branch_gitlab": "develop",
-    "domain": "banking-mobile"
+    "main_branch_gitlab": "develop",
+    "dev_branch_gitlab": "master",
+    "domain": "banking-mobile",
+    "branch_count": 59,
+    "migration_wave": "M3"
   },
   {
     "name": "DIB bank",
@@ -221,23 +223,27 @@
     "gitlab_group": "front-end/banking",
     "layer": "mobile",
     "github_name": "mitf-dib-bank",
-    "has_pipeline": false,
+    "has_pipeline": true,
     "has_unit_test": true,
     "main_branch_gitlab": "development",
-    "dev_branch_gitlab": "yes",
-    "domain": "banking-mobile"
+    "dev_branch_gitlab": "develop",
+    "domain": "banking-mobile",
+    "branch_count": 13,
+    "migration_wave": "M4"
   },
   {
-    "name": "Finish Date",
+    "name": "Daman 360",
     "gitlab_url": "http://10.10.20.51/front-end/banking/daman-360",
     "gitlab_group": "front-end/banking",
     "layer": "mobile",
-    "github_name": "mitf-finish-date",
+    "github_name": "mitf-daman-360",
     "has_pipeline": false,
-    "has_unit_test": false,
-    "main_branch_gitlab": "",
-    "dev_branch_gitlab": "",
-    "domain": "banking-mobile"
+    "has_unit_test": true,
+    "main_branch_gitlab": "main",
+    "dev_branch_gitlab": "develop",
+    "domain": "banking-mobile",
+    "branch_count": 5,
+    "migration_wave": "M4"
   },
   {
     "name": "Masrfi Business",
@@ -249,7 +255,9 @@
     "has_unit_test": true,
     "main_branch_gitlab": "master",
     "dev_branch_gitlab": "develop",
-    "domain": "banking-mobile"
+    "domain": "banking-mobile",
+    "branch_count": 7,
+    "migration_wave": "M4"
   },
   {
     "name": "Masrfi Plus",
@@ -261,7 +269,9 @@
     "has_unit_test": true,
     "main_branch_gitlab": "master",
     "dev_branch_gitlab": "develop",
-    "domain": "banking-mobile"
+    "domain": "banking-mobile",
+    "branch_count": 42,
+    "migration_wave": "M4"
   },
   {
     "name": "Mobimal",
@@ -273,7 +283,9 @@
     "has_unit_test": true,
     "main_branch_gitlab": "master",
     "dev_branch_gitlab": "develop",
-    "domain": "banking-mobile"
+    "domain": "banking-mobile",
+    "branch_count": 30,
+    "migration_wave": "M4"
   },
   {
     "name": "Ncb Business",
@@ -283,9 +295,11 @@
     "github_name": "mitf-ncb-business",
     "has_pipeline": false,
     "has_unit_test": true,
-    "main_branch_gitlab": "master",
-    "dev_branch_gitlab": "develop",
-    "domain": "banking-mobile"
+    "main_branch_gitlab": "develop",
+    "dev_branch_gitlab": "master",
+    "domain": "banking-mobile",
+    "branch_count": 19,
+    "migration_wave": "M4"
   },
   {
     "name": "Sahara Business",
@@ -297,7 +311,9 @@
     "has_unit_test": true,
     "main_branch_gitlab": "master",
     "dev_branch_gitlab": "develop",
-    "domain": "banking-mobile"
+    "domain": "banking-mobile",
+    "branch_count": 8,
+    "migration_wave": "M4"
   },
   {
     "name": "Sahara Mobile",
@@ -307,9 +323,11 @@
     "github_name": "mitf-sahara-mobile",
     "has_pipeline": false,
     "has_unit_test": true,
-    "main_branch_gitlab": "master",
-    "dev_branch_gitlab": "develop",
-    "domain": "banking-mobile"
+    "main_branch_gitlab": "develop",
+    "dev_branch_gitlab": "master",
+    "domain": "banking-mobile",
+    "branch_count": 27,
+    "migration_wave": "M4"
   },
   {
     "name": "Siraj Business",
@@ -319,9 +337,11 @@
     "github_name": "mitf-siraj-business",
     "has_pipeline": false,
     "has_unit_test": true,
-    "main_branch_gitlab": "main",
-    "dev_branch_gitlab": "develop",
-    "domain": "banking-mobile"
+    "main_branch_gitlab": "develop",
+    "dev_branch_gitlab": "main",
+    "domain": "banking-mobile",
+    "branch_count": 4,
+    "migration_wave": "M4"
   },
   {
     "name": "Siraj Mobile",
@@ -333,7 +353,9 @@
     "has_unit_test": true,
     "main_branch_gitlab": "main",
     "dev_branch_gitlab": "develop",
-    "domain": "banking-mobile"
+    "domain": "banking-mobile",
+    "branch_count": 11,
+    "migration_wave": "M4"
   },
   {
     "name": "Waha Mobile",
@@ -345,7 +367,9 @@
     "has_unit_test": true,
     "main_branch_gitlab": "main",
     "dev_branch_gitlab": "development",
-    "domain": "banking-mobile"
+    "domain": "banking-mobile",
+    "branch_count": 4,
+    "migration_wave": "M4"
   },
   {
     "name": "Wahda Business",
@@ -355,9 +379,11 @@
     "github_name": "mitf-wahda-business",
     "has_pipeline": false,
     "has_unit_test": true,
-    "main_branch_gitlab": "-------",
-    "dev_branch_gitlab": "-------",
-    "domain": "banking-mobile"
+    "main_branch_gitlab": "develop",
+    "dev_branch_gitlab": "master",
+    "domain": "banking-mobile",
+    "branch_count": 7,
+    "migration_wave": "M4"
   },
   {
     "name": "Mitt.SystemCore",
@@ -513,7 +539,9 @@
     "has_unit_test": true,
     "main_branch_gitlab": "main",
     "dev_branch_gitlab": "develop",
-    "domain": "payment-mobile"
+    "domain": "payment-mobile",
+    "branch_count": 7,
+    "migration_wave": "M2"
   },
   {
     "name": "Musrfy pay",
@@ -525,19 +553,23 @@
     "has_unit_test": true,
     "main_branch_gitlab": "master",
     "dev_branch_gitlab": "develop",
-    "domain": "payment-mobile"
+    "domain": "payment-mobile",
+    "branch_count": 11,
+    "migration_wave": "M2"
   },
   {
     "name": "Payment core",
     "gitlab_url": "http://10.10.20.51/front-end/payment/payment-core",
     "gitlab_group": "front-end/payment",
-    "layer": "mobile",
+    "layer": "mobile-package",
     "github_name": "mitf-payment-core",
     "has_pipeline": false,
     "has_unit_test": true,
     "main_branch_gitlab": "master",
     "dev_branch_gitlab": "develop",
-    "domain": "payment-mobile"
+    "domain": "payment-mobile",
+    "branch_count": 22,
+    "migration_wave": "M1"
   },
   {
     "name": "Sahara pay",
@@ -549,7 +581,9 @@
     "has_unit_test": true,
     "main_branch_gitlab": "main",
     "dev_branch_gitlab": "develop",
-    "domain": "payment-mobile"
+    "domain": "payment-mobile",
+    "branch_count": 10,
+    "migration_wave": "M2"
   },
   {
     "name": "Siraj Payment",
@@ -561,7 +595,9 @@
     "has_unit_test": true,
     "main_branch_gitlab": "main",
     "dev_branch_gitlab": "develop",
-    "domain": "payment-mobile"
+    "domain": "payment-mobile",
+    "branch_count": 5,
+    "migration_wave": "M2"
   },
   {
     "name": "Yussor pay",
@@ -573,7 +609,9 @@
     "has_unit_test": true,
     "main_branch_gitlab": "master",
     "dev_branch_gitlab": "develop",
-    "domain": "payment-mobile"
+    "domain": "payment-mobile",
+    "branch_count": 17,
+    "migration_wave": "M2"
   },
   {
     "name": "waha_pay",
@@ -583,9 +621,11 @@
     "github_name": "mitf-waha-pay",
     "has_pipeline": false,
     "has_unit_test": true,
-    "main_branch_gitlab": "------",
-    "dev_branch_gitlab": "no",
-    "domain": "payment-mobile"
+    "main_branch_gitlab": "main",
+    "dev_branch_gitlab": "",
+    "domain": "payment-mobile",
+    "branch_count": 1,
+    "migration_wave": "M2"
   },
   {
     "name": "Mitf.Providers.DocumentGeneratorApi",
@@ -802,5 +842,69 @@
     "main_branch_gitlab": "Main",
     "dev_branch_gitlab": "no",
     "domain": "web"
+  },
+  {
+    "name": "mobile-widgets",
+    "gitlab_url": "http://10.10.20.51/front-end/banking/mobile-widgets",
+    "gitlab_group": "front-end/banking",
+    "layer": "mobile-package",
+    "github_name": "mitf-mobile-widgets",
+    "has_pipeline": false,
+    "has_unit_test": true,
+    "main_branch_gitlab": "master",
+    "dev_branch_gitlab": "develop",
+    "domain": "banking-mobile",
+    "migration_wave": "M1",
+    "branch_count": 26,
+    "depends_on": [],
+    "notes": "Shared UI package; path dep from all banking white-label apps"
+  },
+  {
+    "name": "sharedcomponents",
+    "gitlab_url": "http://10.10.20.51/front-end/payment/sharedcomponents",
+    "gitlab_group": "front-end/payment",
+    "layer": "mobile-package",
+    "github_name": "mitf-sharedcomponents",
+    "has_pipeline": false,
+    "has_unit_test": true,
+    "main_branch_gitlab": "main",
+    "dev_branch_gitlab": "develop",
+    "domain": "payment-mobile",
+    "migration_wave": "M1",
+    "branch_count": 4,
+    "depends_on": [],
+    "notes": "Shared UI package; path dep from all payment wallet apps"
+  },
+  {
+    "name": "ozmobile",
+    "gitlab_url": "http://10.10.20.51/front-end/banking/packages/ozmobile",
+    "gitlab_group": "front-end/banking/packages",
+    "layer": "mobile-package",
+    "github_name": "mitf-ozmobile",
+    "has_pipeline": false,
+    "has_unit_test": false,
+    "main_branch_gitlab": "main",
+    "dev_branch_gitlab": "devolop",
+    "domain": "banking-mobile",
+    "migration_wave": "M1",
+    "branch_count": 2,
+    "depends_on": [],
+    "notes": "Git dep from core-mobile-banking pubspec (ozsdk)"
+  },
+  {
+    "name": "mitf-ocr (mobile)",
+    "gitlab_url": "http://10.10.20.51/front-end/banking/packages/mitf-ocr",
+    "gitlab_group": "front-end/banking/packages",
+    "layer": "mobile-package",
+    "github_name": "mitf-mobile-ocr",
+    "has_pipeline": false,
+    "has_unit_test": false,
+    "main_branch_gitlab": "main",
+    "dev_branch_gitlab": "refactor/new-flow",
+    "domain": "banking-mobile",
+    "migration_wave": "M1",
+    "branch_count": 2,
+    "depends_on": [],
+    "notes": "Git dep from banking apps (mitf_ocr package)"
   }
 ]

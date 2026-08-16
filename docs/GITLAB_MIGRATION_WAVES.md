@@ -1,19 +1,33 @@
 # GitLab → GitHub migration waves
 
-Quick reference for Sunday planning. Full detail: [GITLAB_TO_GITHUB_MIGRATION_PLAN.md](./GITLAB_TO_GITHUB_MIGRATION_PLAN.md).
+Quick reference. Full detail: [GITLAB_TO_GITHUB_MIGRATION_PLAN.md](./GITLAB_TO_GITHUB_MIGRATION_PLAN.md).
+
+**Mobile track (priority):** [MOBILE_MIGRATION_PLAN.md](./MOBILE_MIGRATION_PLAN.md) — package-first multi-repo.
 
 | Wave | Domain | Count | Start after |
 |------|--------|-------|-------------|
-| 0 | web | 4 | Pilot Sunday |
+| **M1** | mobile packages | 5 | **Now** (mobile priority) |
+| **M2** | payment-mobile apps | 7 | M1 done |
+| **M3** | core-mobile-banking | 1 | M1 banking packages |
+| **M4** | banking-mobile apps | 12 | M3 done |
+| 0 | web | 4 | Pilot (parallel) |
 | 1 | core-services, reporting, providers | 4 | Wave 0 done |
 | 2 | office, voucher | 6 | Wave 1 |
 | 3 | gateways | 8 | Wave 2 |
 | 4 | transactions | 8 | Wave 3 |
 | 5 | backend-other | 17 | Wave 4 |
-| 6 | payment-mobile | 7 | Wave 5 |
-| 7 | banking-mobile | 13 | Wave 6 |
 
-**Total:** 67 GitLab repositories
+**Total:** 67 GitLab repositories + **4 mobile package repos** (not in original sheet count)
+
+## Mobile wave M1 — Foundation packages (migrate first)
+
+| GitHub name | GitLab path |
+|-------------|-------------|
+| `mitf-payment-core` | `front-end/payment/payment-core` |
+| `mitf-sharedcomponents` | `front-end/payment/sharedcomponents` |
+| `mitf-mobile-widgets` | `front-end/banking/mobile-widgets` |
+| `mitf-ozmobile` | `front-end/banking/packages/ozmobile` |
+| `mitf-mobile-ocr` | `front-end/banking/packages/mitf-ocr` |
 
 ## Wave 0 — Sunday pilot (web)
 

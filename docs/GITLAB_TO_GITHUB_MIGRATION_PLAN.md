@@ -56,12 +56,9 @@ Migrate in waves — smallest, best-documented repos first.
 | **3** | `gateways` | 8 | Payment/notification entry points |
 | **4** | `transactions` | 8 | High coupling — migrate as a batch week |
 | **5** | `backend-other` | 17 | Miscellaneous — review each for platform mapping |
-| **6** | `payment-mobile` | 7 | Flutter; shared core patterns |
-| **7** | `banking-mobile` | 13 | White-label apps; batch by bank family |
+| **M1–M4** | **mobile** (package-first) | **24** | **Priority track** — [MOBILE_MIGRATION_PLAN.md](./MOBILE_MIGRATION_PLAN.md) |
 
-**Sunday target:** Complete **Wave 0** (1–2 repos) + migration tooling validated. Stretch: finish all of Wave 0.
-
----
+**Sunday target:** Complete **M1** foundation packages + validate `flutter pub get` from GitHub git URLs. Parallel: Wave 0 web pilot.
 
 ## Platform mapping (GitLab → existing GitHub)
 

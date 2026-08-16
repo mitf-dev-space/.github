@@ -1,0 +1,7 @@
+legacy_path_or_git_url,github_git_url,github_repo
+../payment-core,https://github.com/mitf-dev-space/mitf-payment-core.git,mitf-payment-core
+../sharedcomponents,https://github.com/mitf-dev-space/mitf-sharedcomponents.git,mitf-sharedcomponents
+../core-mobile-banking,https://github.com/mitf-dev-space/mitf-core-mobile-banking.git,mitf-core-mobile-banking
+../mobile-widgets,https://github.com/mitf-dev-space/mitf-mobile-widgets.git,mitf-mobile-widgets
+http://10.10.20.51/front-end/banking/packages/ozmobile.git,https://github.com/mitf-dev-space/mitf-ozmobile.git,mitf-ozmobile
+http://10.10.20.51/front-end/banking/packages/mitf-ocr.git,https://github.com/mitf-dev-space/mitf-mobile-ocr.git,mitf-mobile-ocr
