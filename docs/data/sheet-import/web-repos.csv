@@ -1,0 +1,5 @@
+migration_wave,name,github_name,gitlab_url,gitlab_group,layer,domain,production_branch_hint,integration_branch_hint,has_pipeline,has_unit_test,github_url,migration_status,notes
+WEB1,Webpages v2,webpages-v2,http://10.10.20.51/front-end/web/webpages-v2.git,front-end/web,web,web,Main,,yes,yes,https://github.com/mitf-dev-space/webpages-v2,planned,Source branch hints require verification.
+WEB2,MITF Office,mitf-office,http://10.10.20.51/front-end/web/mitf-office.git,front-end/web,web,web,Main,,yes,no,https://github.com/mitf-dev-space/mitf-office,planned,Source branch hints require verification.
+WEB3,Control Panel,control-panel,http://10.10.20.51/front-end/web/control-panel.git,front-end/web,web,web,Main,,yes,no,https://github.com/mitf-dev-space/control-panel,planned,Source branch hints require verification.
+WEB4,Biller Aggregator,biller-aggregator,http://10.10.20.51/front-end/web/biller-aggregator.git,front-end/web,web,web,Main,,yes,no,https://github.com/mitf-dev-space/biller-aggregator,planned,Source branch hints require verification.
