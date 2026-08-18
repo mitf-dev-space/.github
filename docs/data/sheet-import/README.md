@@ -1,46 +1,37 @@
-# Google Sheet import guide — mobile migration
+# Team repository inventory — sheet import
 
-Use these files to fix the [repository sheet](https://docs.google.com/spreadsheets/d/125Hl9a5Rp1VjkzXGDisWniaW02ID2Jo4jpS_GjZrU8Y/edit) and track progress.
+Canonical CSV inventories for **mitf-dev-space** team access and migration tracking.
 
 ## Files
 
-| File | Purpose |
-|------|---------|
-| [mobile-repos-corrected.csv](./mobile-repos-corrected.csv) | **24 mobile rows** (20 apps + 4 packages) with corrected branches |
-| [pubspec-dependency-map.csv](./pubspec-dependency-map.csv) | Legacy path → GitHub git URL mapping |
+| File | Team | Rows | Purpose |
+|------|------|------|---------|
+| [backend-repos.csv](./backend-repos.csv) | backend | 45 | Active backend services (running + in development) |
+| [mobile-repos-corrected.csv](./mobile-repos-corrected.csv) | mobile | 25 | Mobile apps and packages (excludes blocked vendor mirrors) |
+| [web-repos.csv](./web-repos.csv) | web | 4 | Web front-end repositories |
+| [pubspec-dependency-map.csv](./pubspec-dependency-map.csv) | mobile | — | Legacy path → GitHub git URL mapping |
 
-## How to import (repo sheet)
+`agent-workspace` is shared across teams but is **not** listed in these CSVs. Only org super-admins (`anstwechy`, `FayrozBasher`, `JihadEjdaydhom`) and engineering-leads retain admin on it; all team members have read-only access.
 
-1. Open the **Front-End Mobile** tab (or create a **Mobile migration** tab).
-2. **File → Import → Upload** → select `mobile-repos-corrected.csv`.
-3. Choose **Replace current sheet** or **Insert new columns** if you want to keep history.
-4. Add columns if missing: `migration_wave`, `migration_status`, `github_url`, `branch_count`, `notes`.
-5. Fix row **Finish Date** → **Daman 360** (already corrected in CSV).
+## Access model (Aug 2026)
 
-## Developer sheet
+| Role | Web (4) | Mobile (25) | Backend (45) | agent-workspace |
+|------|---------|-------------|--------------|-----------------|
+| Super-admins | admin | admin | admin | admin |
+| Engineering leads (`rashadshayoup`) | admin | admin | admin | admin |
+| Team lead | admin | admin (2 maintainers) | admin (`mohamed49altarhuni`) | read |
+| Team members | write | write | write | read |
 
-[Developer mapping sheet](https://docs.google.com/spreadsheets/d/14QkyaksE7fNKcHETQpSauii-ELzxXsimaMXIZGUPHzM/edit)
+Apply permissions with:
 
-Add columns:
-
-| Column | Example |
-|--------|---------|
-| `github_username` | `anstwechy` |
-| `github_team` | `mobile` |
-| `gitlab_username` | from GitLab |
-| `invite_accepted` | yes/no |
-| `mobile_apps_owned` | `mitf-daman-pay`, … |
-
-After invites accepted, run:
-
-```bash
-gh api orgs/mitf-dev-space/teams/mobile/memberships/anstwechy -X PUT -f role=member
+```powershell
+pwsh -File scripts/Apply-TeamPermissions.ps1
 ```
 
 ## Regenerate CSVs
 
-From repo root (company network):
-
 ```bash
 python scripts/mobile/update-mobile-inventory.py
 ```
+
+Backend inventory source: GitLab activity analysis + owner matrix (see `BACKEND_INVENTORY_RECONCILIATION.md` in migration workspace).
